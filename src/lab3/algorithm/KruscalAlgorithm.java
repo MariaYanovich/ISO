@@ -89,20 +89,29 @@ public class KruscalAlgorithm implements Serializable {
         this.graph = graph;
     }
 
-    /* Возвращает множество, которому принадлежит x */
+
     int set(int x) {
-        return x == set[x] ? x : (set[x] = set(set[x]));
+        if (x == set[x]) {
+            return x;
+        } else {
+            set[x] = set(set[x]);
+            return set[x];
+        }
     }
 
     boolean union(int u, int v) {
-        if ((u = set(u)) == (v = set(v)))
+        u = set(u);
+        v = set(v);
+        if (u == v) {
             return false;
-        if (rank[u] < rank[v])
+        }
+        if (rank[u] < rank[v]) {
             set[u] = v;
-        else {
+        } else {
             set[v] = u;
-            if (rank[u] == rank[v])
+            if (rank[u] == rank[v]) {
                 rank[u]++;
+            }
         }
         return true;
     }

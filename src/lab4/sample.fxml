@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<GridPane xmlns:fx="http://javafx.com/fxml/1" alignment="center" hgap="10"
+          vgap="10"
+          xmlns="http://javafx.com/javafx/8.0.111"
+          fx:controller="lab4.AlgorithmWindow">
+    <children>
+        <AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity"
+                    maxWidth="-Infinity" minHeight="-Infinity"
+                    minWidth="-Infinity" prefHeight="678.0"
+                    prefWidth="965.0" GridPane.columnIndex="1"
+                    GridPane.rowIndex="1"
+                    xmlns="http://javafx.com/javafx/8">
+            <children>
+                <SplitPane layoutX="-205.0" layoutY="-59.0" prefHeight="737.0"
+                           prefWidth="383.0"
+                           style="-fx-border-color: whitesmoke;"
+                           AnchorPane.bottomAnchor="0.0"
+                           AnchorPane.leftAnchor="-205.0"
+                           AnchorPane.rightAnchor="787.0"
+                           AnchorPane.topAnchor="-59.0">
+                </SplitPane>
+                <Button fx:id="fileGraph" layoutX="19.0" layoutY="1.0"
+                        mnemonicParsing="false" onAction="#readGraph"
+                        prefHeight="40.0" prefWidth="304.0"
+                        text="Считать граф из файла" textFill="#f21168">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Button>
+                <Label fx:id="text3" layoutX="19.0" layoutY="25.0"
+                       prefHeight="69.0" prefWidth="308.0"
+                       text="Введите начальную вершину:" textFill="#f21168">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Label>
+                <TextField fx:id="textField1" layoutX="19.0" layoutY="80.0"
+                           prefHeight="39.0" prefWidth="150.0">
+                    <cursor>
+                        <Cursor fx:constant="TEXT"/>
+                    </cursor>
+                    <font>
+                        <Font size="14.0"/>
+                    </font>
+                </TextField>
+                <Button fx:id="begin" layoutX="180.0" layoutY="80.0"
+                        mnemonicParsing="false" onAction="#workBegin"
+                        prefHeight="30.0" prefWidth="150.0"
+                        text="Пуск" textFill="#f21168">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Button>
+                <TextArea fx:id="result" layoutX="21.0" layoutY="416.0"
+                          prefHeight="150.0" prefWidth="300.0"/>
+                <Label fx:id="text2" layoutX="19.0" layoutY="358.0"
+                       prefHeight="71.0" prefWidth="249.0"
+                       text="Результат:" textFill="#f21168">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="text1" layoutX="21.0" layoutY="93.0"
+                       prefHeight="112.0" prefWidth="130.0"
+                       text="Заданный граф:" textFill="#f21168">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Label>
+                <TextArea fx:id="textGraph" layoutX="21.0" layoutY="173.0"
+                          prefHeight="190.0" prefWidth="300.0"
+                          AnchorPane.bottomAnchor="315.0"
+                          AnchorPane.leftAnchor="21.0"
+                          AnchorPane.rightAnchor="640.0"
+                          AnchorPane.topAnchor="173.0"/>
+                <Button fx:id="next" layoutX="23.0" layoutY="571.0"
+                        mnemonicParsing="false" onAction="#nextMenu"
+                        prefHeight="39.0" prefWidth="300.0"
+                        text="Визуализация" textFill="#f21168">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="back" layoutX="20.0" layoutY="571.0"
+                        mnemonicParsing="false" onAction="#backMenu"
+                        prefHeight="39.0" prefWidth="300.0" text="Назад"
+                        textFill="#f21168" visible="false">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Button>
+                <Label fx:id="vertex" layoutX="19.0" layoutY="25.0"
+                       prefHeight="69.0" prefWidth="308.0"
+                       text="Введите конечную вершину:" textFill="#f21168"
+                       visible="false">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Label>
+                <TextArea fx:id="graphV" layoutX="19.0" layoutY="80.0"
+                          prefHeight="39.0" prefWidth="123.0" visible="false"/>
+                <Button fx:id="graphWay" layoutX="159.0" layoutY="80.0"
+                        mnemonicParsing="false" onAction="#getWay"
+                        prefHeight="30.0" prefWidth="176.0" text="Пуск"
+                        textFill="#f21168" visible="false">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Button>
+            </children>
+            <cursor>
+                <Cursor fx:constant="HAND"/>
+            </cursor>
+        </AnchorPane>
+    </children>
+    <columnConstraints>
+        <ColumnConstraints/>
+        <ColumnConstraints/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints/>
+        <RowConstraints/>
+    </rowConstraints>
+</GridPane>

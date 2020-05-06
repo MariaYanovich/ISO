@@ -1,0 +1,21 @@
+.network, .matrix {
+    display: block;
+    background-color: white;
+}
+
+.network {
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+}
+
+.matrix {
+    width: 400px;
+    height: 400px;
+}
+
+.display {
+    font-size: 16px;
+    color:  black;
+    font-weight: bold;
+}
